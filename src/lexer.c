@@ -6,7 +6,6 @@
 #include <ctype.h>
 #include "include/lexer.h"
 
-
 lexer_T* init_lexer(char* contents){
     lexer_T* lexer = calloc(1, sizeof(struct LEXER_STRUCT));
     lexer -> contents = contents;
@@ -36,8 +35,10 @@ token_T* lexer_get_next_token(lexer_T* lexer){
         
         if (lexer -> c == '"')
             return lexer_collect_string(lexer);
+            
         if (isalnum(lexer -> c))
             return lexer_collect_id(lexer);
+
         switch (lexer -> c)
         {
             case '=': return lexer_advance_with_token(lexer, init_token(TOKEN_EQUALS, lexer_get_current_char_as_string(lexer)));

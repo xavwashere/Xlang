@@ -1,0 +1,7 @@
+var_name = "var value"
+
+func function(params){
+    out(params)
+}
+
+out(var_name)

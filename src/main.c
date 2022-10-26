@@ -3,8 +3,8 @@
 
 int main(int argc, char* argv[]){
     lexer_T* lexer = init_lexer(
-       "def var = \"var\";"
-       "print(var)"
+       "def var = \"var\";\n"
+       "print(var)\n"
     );
 
     token_T* token = (void*)0;

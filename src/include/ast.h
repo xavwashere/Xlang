@@ -7,9 +7,10 @@
 typedef struct AST_STRUCT{
     enum {
         AST_FUNCTION_CALL,
-        AST_var_DEFINE,
-        AST_var,
-        AST_STRING
+        AST_VAR_DEFINE,
+        AST_VAR,
+        AST_STRING,
+        AST_COMPOUND
     } type;
 
     char* ast_var_define_var_name;
@@ -22,6 +23,9 @@ typedef struct AST_STRUCT{
     size_t func_call_arg_size;
 
     char* string_value;
+
+    struct AST_STRUCT** compound_value;
+    size_t compound_size;
 
 } ast_T;
 

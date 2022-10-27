@@ -15,6 +15,9 @@ ast_T* init_ast(int type){
     ast -> func_call_arg_size = (void*)0;
 
     ast -> string_value = (void*)0;
+
+    ast -> compound_value = (void*)0;
+    ast -> compound_size = 0;
     
     return ast;
 }

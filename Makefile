@@ -1,6 +1,6 @@
 exec = xlang.exe
 sources = $(wildcard src/*.c)
-objects = $(sources: .c = .exe)
+objects = $(sources: .c = .o)
 flags = -g
 
 $(exec): $(objects)

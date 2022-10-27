@@ -1,4 +1,4 @@
-var_name = "var value"
+def var_name = "var value"
 
 func function(params){
     out(params)

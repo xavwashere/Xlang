@@ -7,7 +7,11 @@ typedef struct TOKEN_STRUCT{
         TOKEN_STRING,
         TOKEN_SEMICOLON,
         TOKEN_LPAREN,
-        TOKEN_RPAREN
+        TOKEN_RPAREN,
+        TOKEN_EOF,
+        TOKEN_LBRACE,
+        TOKEN_RBRACE,
+        TOKEN_COMMA
     } type;
 
     char* value;
